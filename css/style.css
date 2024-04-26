@@ -206,7 +206,8 @@ main {
     font-variant: all-small-caps;
     width: auto;
     cursor: pointer;
-    transition: scale .4s, box-shadow .4s;
+    transition-property: scale, box-shadow;
+    transition-duration: .3s;
     box-shadow:1px 1px 3px 0px #848484;
 }
 .arrow {
@@ -216,10 +217,10 @@ main {
     scale: 1.03;
     box-shadow:1px 1px 3px 1px #848484;
 }
-/* .hero-text button:active {
+.hero-text button:active {
     box-shadow:1px 1px 3px 0px #848484;
     scale: 1;
-} */
+}
 
 /* SERVIZI */
 .servizi {
@@ -262,18 +263,24 @@ main {
 }
 .lista-servizi span {
     margin-left: auto;
-    margin-right: 2rem;
+    margin-right: 2.2rem;
     cursor: pointer;
     font-family: cursive;
 }
 .nav-text {
-    overflow: auto;
-    height: auto;
+    /* overflow: auto;
+    height: 200px; */
+    height: 300px;
     border-bottom: 1px solid white;
     padding: 0.5rem 0;
     margin-bottom: .4rem;
-    transition: all 1s;
+    transition-property: all;
+    transition-duration: .5s;
+    transform-origin: top right;
     opacity: 1;
+    transform: scale(1);
+    /* scrollbar-width: thin;
+    scrollbar-color: #dc1a00 #e54833; */
 }
 .hide {
     height: 0; 
@@ -282,6 +289,7 @@ main {
     padding: 0;
     margin-bottom: 0;
     opacity: 0;
+    transform: scale(0);
 }
 .lista-servizi p {
     padding: 1rem 0;
