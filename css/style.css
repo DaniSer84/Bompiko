@@ -1,0 +1,338 @@
+:root {
+    --main-color: #e54833;
+
+    --small-space: 0.6rem;
+    --medium-space: 1.4rem;
+    --large-space: 2.4rem;
+}
+html {
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'Epilogue';
+    src: url('/fonts/Epilogue-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Platypi';
+    src: url('/fonts/platypi/Platypi-Italic-VariableFont_wght.ttf');
+}
+
+body, html, h1, h2, h3, h4, h5, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Epilogue';
+    /* font-size: .8rem; */
+}
+.hero-text p, .servizi p {
+    line-height: 1.3rem;
+}
+ul, li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+h1, h3 {
+    font-family: 'Platypi';
+}
+
+
+/* **** HEADER ***** */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 6rem 0 6rem;
+}
+.brand img, footer img {
+    width: 130px;
+}
+/* MENU */
+.header-nav {
+    display: flex;
+    flex-basis: auto;
+    position: relative;
+}
+.header-nav p {
+    margin: auto;
+}
+.header-nav p:first-child {
+    color: var(--main-color);
+}
+.header-links {
+    width: 0;
+    opacity: 0;
+    scale: 0.3;
+    transition: opacity .5s, width .5s, scale .5s;
+    text-align: right;
+}
+.header-links a {
+    border-bottom: 1px solid white;
+    transition: border-bottom .4s;
+    display: inline-block;
+    margin: .4rem .2rem;
+}
+.header-links.open {
+    width: 80px;
+    opacity: 1;
+    scale: 1;
+    margin-left: .5rem;
+}
+.header-links a:hover {
+    border-bottom-color: var(--main-color);
+}
+.hide-links {
+    width: 69px;
+    height: 36px;
+    background-color: white;
+    position: absolute;
+    right: -27px;
+    z-index: 1;
+}
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    transform: rotate(-45deg);
+    transition: transform .4s;
+    margin-left: .5rem;
+    z-index: 2;
+}
+.hamburger span {
+    display: block;
+    background-color: rgb(150, 149, 149);
+    height: 1.5px;
+    width: 23px;
+    /* margin: 3.6px 0; */
+    margin: .3rem 0;
+    position: relative;
+    z-index: 9;
+    transform: rotate(0);
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition-duration: .4s;
+    transition: transform, opacity, top;
+    transform-origin: center;
+}
+.hamburger span:nth-child(2) {
+    margin-top: 4px;
+}
+.hamburger:not(.closed) span:nth-child(1) {
+    transform: rotate(45deg) ;
+    top: 3.5px;
+}
+.hamburger:not(.closed) span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger:not(.closed) span:nth-child(3) {
+    transform: rotate(-45deg) ;
+    top: -9px;
+}
+.hamburger:not(.closed) {
+    transform: rotate(0);
+}
+
+/* ********* MAIN *********** */
+main {
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+}
+/* HERO */
+.hero {
+    background-color: white;
+    padding-bottom: 6rem;
+    position: relative;
+}
+.hero-img-line {
+    width: 1.1px;
+    height: 60px;
+    background-color: var(--main-color);
+    margin: auto;
+}
+.hero-img {
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    width: 46px;
+}
+.hero-text-container {
+    width: 700px;
+    margin: 3rem  auto;
+}
+.hero-text-container > p {
+    font-size: 2.1rem;
+    height: 130px;
+    position: relative;
+}
+.tua {
+    position: absolute;
+    font-size: 6rem;
+    color: var(--main-color);
+    font-weight: 600;
+    transform: translate(110%);
+    /* left: 50%; */
+}
+.comunicazione {
+    position: absolute;
+    font-size: 3rem;
+    transform: translate(118%, 0%);
+    font-family: ui-monospace;
+    font-weight: 500;
+}
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.hero-text div {
+    width: 50%;
+}
+.hero-text p{
+    padding: 1rem;
+}
+.hero-text button {
+    margin-left: 1rem;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    padding: 0.3rem 1rem;
+    font-variant: all-small-caps;
+    width: auto;
+    cursor: pointer;
+    transition: scale .4s, box-shadow .4s;
+    box-shadow:1px 1px 3px 0px #848484;
+}
+.arrow {
+    margin-left: .5rem;
+}
+.hero-text button:hover {
+    scale: 1.03;
+    box-shadow:1px 1px 3px 1px #848484;
+}
+/* .hero-text button:active {
+    box-shadow:1px 1px 3px 0px #848484;
+    scale: 1;
+} */
+
+/* SERVIZI */
+.servizi {
+    color: white;
+    /* margin-top: 7rem; */
+    background-color: var(--main-color);
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.servizi-text-container {
+    margin-right: 6rem;
+    max-width: 470px;
+    padding-bottom: 9rem;
+}
+.servizi h1 {
+    font-size: 3.8rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+}
+.servizi-text-container > p {
+    min-height: 130px;
+    padding: 0 1.5rem;
+    margin-left: 7rem;
+    margin-bottom: 1rem;
+    border-left: 1.5px solid black;
+}
+.lista-servizi li {
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    color: black;
+    border-bottom: 1px solid white;
+    margin-bottom: 0.5rem;
+    display: flex;
+}
+.lista-servizi li:last-of-type {
+    border-bottom: none;
+}
+.lista-servizi span {
+    margin-left: auto;
+    margin-right: 2rem;
+    cursor: pointer;
+    font-family: cursive;
+}
+.nav-text {
+    overflow: auto;
+    height: auto;
+    border-bottom: 1px solid white;
+    padding: 0.5rem 0;
+    margin-bottom: .4rem;
+    transition: all 1s;
+    opacity: 1;
+}
+.hide {
+    height: 0; 
+    overflow: hidden; 
+    border-bottom: none;
+    padding: 0;
+    margin-bottom: 0;
+    opacity: 0;
+}
+.lista-servizi p {
+    padding: 1rem 0;
+    letter-spacing: 0.1rem;
+}
+
+
+/* **** LOGO E IMMAGINE ***** */
+.logo-container {
+    width: 70px;
+    bottom: -46px;
+    right: 100px;
+    position: absolute;
+    z-index: 1;
+}
+.logo {
+    width: 100%;
+}
+.brand-image {
+    overflow: hidden;
+    position: absolute;
+    bottom: -265px;
+    right: 0;
+    max-height: 400px;
+}
+.imagotipo-big {
+    width: 480px;
+    /* bottom: -315px; */
+    right: 0;
+}
+
+
+/* ****** FOOTER ********* */
+footer {
+    background-color: black;
+    color: white;
+    padding: 6rem;
+    font-size: .8rem;
+    position: relative;
+}
+footer h3 {
+    margin-bottom: .8rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+footer a {
+    color: white;
+}
+.contatti {
+    display: flex;
+    padding: 2rem;
+    justify-content: space-evenly;
+}
+
