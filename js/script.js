@@ -1,7 +1,7 @@
 let menuButton = document.querySelector('#hamburger')
 let headerLinks = document.querySelector('.header-links')
-let serviziButton = headerLinks.querySelector('a[href="#servizi"]')
-let contattiButton = headerLinks.querySelector('a[href="#contatti"]')
+// let serviziButton = headerLinks.querySelector('a[href="#servizi"]')
+// let contattiButton = headerLinks.querySelector('a[href="#contatti"]')
 let comunicazioneButton = document.querySelector('#comunicazione-btn')
 let comunicazioneDiv = document.querySelector('#comunicazione-text')
 let marketingButton = document.querySelector('#marketing-btn')
@@ -19,15 +19,22 @@ menuButton.addEventListener('click', () => {
     headerLinks.classList.toggle('open')
 })
 
-serviziButton.addEventListener('click', () => {
-    menuButton.classList.toggle('closed')
-    headerLinks.classList.toggle('open')
+headerLinks.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+        menuButton.classList.toggle('closed')
+        headerLinks.classList.toggle('open')
+    }
 })
 
-contattiButton.addEventListener('click', () => {
-    menuButton.classList.toggle('closed')
-    headerLinks.classList.toggle('open')
-})
+// serviziButton.addEventListener('click', () => {
+//     menuButton.classList.toggle('closed')
+//     headerLinks.classList.toggle('open')
+// })
+
+// contattiButton.addEventListener('click', () => {
+//     menuButton.classList.toggle('closed')
+//     headerLinks.classList.toggle('open')
+// })
 
 comunicazioneButton.addEventListener('click', () => {
     toggleText(comunicazioneButton, comunicazioneDiv)
