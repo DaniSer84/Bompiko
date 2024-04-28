@@ -1,7 +1,15 @@
 let menuButton = document.querySelector('#hamburger')
 let headerLinks = document.querySelector('.header-links')
-// let serviziButton = headerLinks.querySelector('a[href="#servizi"]')
-// let contattiButton = headerLinks.querySelector('a[href="#contatti"]')
+let listaServizi = document.querySelector('.lista-servizi')
+
+console.log(listaServizi)
+listaServizi.addEventListener('click', (e) => {
+    // console.log(e.target)
+})
+
+let buttons = Array.from(listaServizi.querySelectorAll('span'))
+console.log(buttons)
+
 let comunicazioneButton = document.querySelector('#comunicazione-btn')
 let comunicazioneDiv = document.querySelector('#comunicazione-text')
 let marketingButton = document.querySelector('#marketing-btn')
@@ -26,15 +34,6 @@ headerLinks.addEventListener('click', (e) => {
     }
 })
 
-// serviziButton.addEventListener('click', () => {
-//     menuButton.classList.toggle('closed')
-//     headerLinks.classList.toggle('open')
-// })
-
-// contattiButton.addEventListener('click', () => {
-//     menuButton.classList.toggle('closed')
-//     headerLinks.classList.toggle('open')
-// })
 
 comunicazioneButton.addEventListener('click', () => {
     toggleText(comunicazioneButton, comunicazioneDiv)
