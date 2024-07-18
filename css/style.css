@@ -53,6 +53,7 @@ header {
 /* MENU */
 .header-nav {
     display: flex;
+    gap: 1rem;
     flex-basis: auto;
     position: relative;
 }
@@ -68,12 +69,14 @@ header {
     scale: 0;
     transition: opacity .5s, width .5s, scale .5s;
     text-align: right;
+    /* display: flex; */
 }
 .header-links a {
     border-bottom: 1px solid white;
     transition: border-bottom .4s;
     display: inline-block;
     margin: .4rem .2rem;
+    font-weight: bold;
 }
 .header-links.open {
     width: 80px;
@@ -257,6 +260,7 @@ main {
     border-bottom: 1px solid white;
     margin-bottom: 0.5rem;
     display: flex;
+    align-items: flex-end;
 }
 .lista-servizi li:last-of-type {
     border-bottom: none;
@@ -299,7 +303,7 @@ main {
 
 /* **** LOGO E IMMAGINE ***** */
 .logo-container {
-    width: 70px;
+    width: 85px;
     bottom: -46px;
     right: 100px;
     position: absolute;
@@ -343,4 +347,100 @@ footer a {
     padding: 2rem;
     justify-content: space-evenly;
 }
+.mobile-extra-header {
+    display: none;
+}
 
+/* MEDIA QUERIES */
+
+@media (max-width: 700px) { 
+    body {
+        font-size: 0.9rem;
+    }
+
+    /* HEADER */
+    .mobile-extra-header {
+        display: block;
+        /* height: 3rem; */
+        background-color: var(--main-color);
+        text-align: right;
+        padding: 1.3rem;
+        /* position: sticky;
+        width: 100%;
+        z-index: 99; */
+    }
+    .mobile-extra-header > a {
+        color: white;
+    }
+
+    /* HERO */
+    .hero {
+        padding-bottom: 2.5rem;
+    }
+    .hero-text-container {
+        max-width: 350px;
+    }
+    .hero-text-container > p {
+        font-size: 1.6rem;
+    }
+    header {
+        padding: .5rem 2rem;
+    }
+    .tua {
+        transform: translate(26%);
+    }
+    .comunicazione {
+        font-size: 2.5rem;
+        transform: translate(31%, 104%);
+        font-family: ui-monospace;
+    }
+    .hero-text div {
+        width: 100%;
+    }
+    .hero-text button {
+        margin-left: 8rem;
+    }
+
+    /* SERVIZI */
+    .logo-container {
+        right: 40px;
+    }
+    .servizi {
+        padding: 3.5rem 1.5rem;
+    }
+    .servizi-text-container {
+        margin-right: 0;
+        padding-bottom: 2rem;
+    }
+    .servizi-text-container > p {
+        margin-left: 5rem;
+        min-height: 185px;
+        padding-right: 0;
+    }
+    .servizi h1 {
+        font-size: 2.5rem;
+    }
+    .lista-servizi span {
+        margin-right: .5rem;
+    }
+    .imagotipo-big {
+        width: 330px;
+    }
+    footer {
+        padding: 3rem;
+        font-size: 1rem;
+    }
+    .footer-brand img{
+        width: 180px;
+        display: block;
+        margin: auto;
+    }
+    .contatti {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    .contatti h3 {
+        margin-bottom: .5rem;
+    }
+ }
