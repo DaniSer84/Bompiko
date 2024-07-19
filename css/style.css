@@ -69,6 +69,7 @@ header {
     transition: opacity .7s;
     display: flex;
     gap: var(--medium-space);
+
 }
 .header-links a {
     border-bottom: 1px solid white;
@@ -76,6 +77,7 @@ header {
     display: inline-block;
     margin: .4rem .2rem .4rem 1.3rem;
     font-weight: bold;
+    padding-bottom: .2rem;
 }
 .header-links.open {
     opacity: 1;
@@ -305,7 +307,7 @@ main {
     overflow: hidden;
     position: absolute;
     bottom: -265px;
-    right: 5rem;
+    right: 15%;
     max-height: 400px;
 }
 .imagotipo-big {
@@ -356,6 +358,8 @@ footer a {
         background-color: var(--main-color);
         text-align: right;
         padding: 1.3rem;
+        z-index: 100;
+        position: relative;
     }
     .mobile-extra-header > a {
         color: white;
@@ -372,6 +376,9 @@ footer a {
         box-shadow: 14px 3px 47px #888888;
         background-color: white;
         width: 100%;
+    }
+    .header-links a {
+        padding-bottom: 0;
     }
 
     /* HERO */
@@ -426,6 +433,10 @@ footer a {
     }
     .imagotipo-big {
         width: 330px;
+    }
+    .brand-image {
+        bottom: -250px;
+        right: 0%;
     }
 
     /* FOOTER */
