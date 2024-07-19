@@ -187,6 +187,7 @@ main {
     transform: translate(118%, 0%);
     font-family: ui-monospace;
     font-weight: 500;
+    margin-right: 2rem;
 }
 .hero-text {
     display: flex;
@@ -421,7 +422,8 @@ footer a {
         font-size: 2.5rem;
     }
     .lista-servizi span {
-        margin-right: .5rem;
+        margin-right: 0;
+        padding: 0 1rem ;
     }
     .imagotipo-big {
         width: 330px;
