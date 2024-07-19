@@ -47,6 +47,7 @@ header {
     align-items: center;
     padding: .5rem 6rem 0 6rem;
     max-width: 1300px;
+    margin: auto;
 }
 .brand img, footer img {
     width: 130px;
@@ -293,7 +294,7 @@ main {
 .logo-container {
     width: 85px;
     bottom: -46px;
-    right: 100px;
+    right: 20%;
     position: absolute;
     z-index: 1;
 }
@@ -304,7 +305,7 @@ main {
     overflow: hidden;
     position: absolute;
     bottom: -265px;
-    right: 0;
+    right: 5rem;
     max-height: 400px;
 }
 .imagotipo-big {
@@ -321,7 +322,7 @@ footer {
     padding: 6rem;
     font-size: .8rem;
 }
-.footer {
+.footer-brand {
     max-width: 1300px;
     margin: auto;
 }
@@ -368,6 +369,7 @@ footer a {
         top: 0;
         padding: .6rem 0;
         border-bottom: .5px solid black;
+        box-shadow: 14px 3px 47px #888888;
         background-color: white;
         width: 100%;
     }
