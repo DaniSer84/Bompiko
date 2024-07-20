@@ -53,6 +53,20 @@ header {
     width: 130px;
 }
 
+/* DETAILS */
+.arrow-up {
+    font-size: 1.3rem;
+    color: #a71e0c;
+    position: absolute;
+    right: 15%;
+    top: 95px
+}
+.arrow-up-footer {
+    font-size: 1.3rem;
+    position: absolute;
+    right: 15%;
+    color: gray;
+}
 
 /* MENU */
 .header-nav {
