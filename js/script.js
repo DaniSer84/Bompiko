@@ -19,7 +19,6 @@ menuButton.addEventListener('click', () => {
 
 headerLinks.addEventListener('click', (e) => {
     if (e.target.tagName === 'A') {
-        console.log(e.target.tagName)
         toggleMenu(menuButton, headerLinks)
     }
 })
