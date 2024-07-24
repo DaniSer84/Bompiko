@@ -174,15 +174,13 @@ main {
     margin: auto;
     padding: 1rem;
     width: 46px;
-    animation: heroImgAppear 1s ease-in-out 1s forwards;
+    animation: heroImgAppear 1.2s ease-in-out 1s forwards;
     position: relative;
     left: -700px
 }
 @keyframes heroImgAppear {
     0% {left: -700px}
-    /* 40% {left: +150px;}
-    60% {left: -80px;}
-    80% {left: +30px;} */
+    80% {left: 10px;}
     100% { left: 0;}
 }
 .hero-text-container {
@@ -194,20 +192,32 @@ main {
     height: 130px;
     position: relative;
 }
+.main-title {
+    opacity: 0;
+    animation: mainTitle 1s ease-in-out 2s forwards ;
+}
+@keyframes mainTitle {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
 .tua {
     position: absolute;
+    opacity: 0;
     font-size: 6rem;
     color: var(--main-color);
     font-weight: 600;
     transform: translate(110%);
     /* left: 50%; */
+    animation: mainTitle 1.3s ease-in-out 3s forwards ;
 }
 .comunicazione {
+    opacity: 0;
     position: absolute;
     font-size: 3rem;
     transform: translate(118%, 0%);
     font-family: ui-monospace;
     font-weight: 500;
+    animation: mainTitle 1.3s ease-in-out 2.5s forwards ;
 }
 .hero-text {
     display: flex;
@@ -412,8 +422,8 @@ footer a {
         left: 0;
         top: 0;
         padding: .6rem 0;
-        border-bottom: .5px solid black;
-        box-shadow: 14px 3px 47px #888888;
+        /* border-bottom: .5px solid black; */
+        box-shadow: 14px 3px 47px var(--main-color);
         background-color: white;
         width: 100%;
     }
