@@ -1,17 +1,13 @@
+import { createServicesList } from "./modules/listaServizi.js"
+import { SERVIZI } from "./modules/servizi.js"
+
+
 let menuButton = document.querySelector('#hamburger')
 let headerLinks = document.querySelector('.header-links')
 let listaServizi = document.querySelector('.lista-servizi')
 let containers = Array.from(listaServizi.querySelectorAll('div'))
 
-listaServizi.addEventListener('click', (e) => {
-    let pressedButton = e.target.closest('span')
-    containers.forEach(container => {
-        if (container.dataset.filter === pressedButton.dataset.filter) {
-            toggleText(pressedButton, container)
-        }
-    })
-    }
-)
+createServicesList(SERVIZI, listaServizi)
 
 menuButton.addEventListener('click', () => {
     toggleMenu(menuButton, headerLinks)
@@ -28,11 +24,5 @@ function toggleMenu(button, container) {
     container.classList.toggle('open')
 }
 
-function toggleText(button, container) {
-    container.classList.toggle('hide')
-        if (container.classList.contains('hide')) {
-            button.textContent = '+'
-        } else {
-            button.textContent = 'X'
-        }
-}
+
+
