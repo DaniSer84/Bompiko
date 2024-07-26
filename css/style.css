@@ -309,9 +309,8 @@ main {
     font-family: cursive;
 }
 .nav-text {
-    /* overflow: auto;
-    height: 200px; */
-    height: 300px;
+    overflow: auto;
+    height: 200px;
     border-bottom: 1px solid white;
     padding: 0.5rem 0;
     margin-bottom: .4rem;
@@ -320,8 +319,8 @@ main {
     transform-origin: top right;
     opacity: 1;
     transform: scale(1);
-    /* scrollbar-width: thin;
-    scrollbar-color: #dc1a00 #e54833; */
+    scrollbar-width: thin;
+    scrollbar-color: #dc1a00 #e54833;
 }
 .hide {
     height: 0; 
