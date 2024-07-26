@@ -1,4 +1,4 @@
-import { toggleText } from "./functions";
+import { toggleText } from "./functions.js";
 
 function createServicesList(list, container) {
     list.forEach(element => {
