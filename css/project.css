@@ -1,0 +1,70 @@
+:root {
+    --main-color: #e54833;
+    
+    --small-space: 0.6rem;
+    --medium-space: 1.4rem;
+    --large-space: 2.4rem;
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: 60% auto;
+    grid-template-rows: auto auto auto;
+    margin: 0 80px;
+    margin-bottom: 150px;
+    gap: 15px 10px;
+}
+.project-title {
+    grid-column: 1 / span 2;
+    text-align: center;
+    padding: 30px 0 45px 0;
+}
+.project-slides {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 2;
+    position: relative;
+}
+.next, .prev {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 10px;
+    right: 25px;
+    &:hover {
+        scale: 1.2;
+    }
+    &:active {
+        scale: 1;
+    }
+}
+.prev {
+    right: 75px;
+}
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.project-details, .project-extra {
+    margin: 0 30px;
+}
+.hero {
+    padding-bottom: 0;
+    min-height: auto;
+}
+h3 {
+    font-family: inherit;
+    margin-bottom: 20px;
+}
+.project-extra {
+    border-top: 1px solid var(--main-color);
+}
+.project-extra > p {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid var(--main-color);
+}
+.project-extra span {
+    font-weight: bold;
+    font-size: large;
+}
