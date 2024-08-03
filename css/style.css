@@ -83,11 +83,15 @@ header {
     color: var(--main-color);
 }
 .header-links {
-    opacity: 0;
-    transition: opacity .7s;
     display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity .7s;
     gap: var(--medium-space);
-
+}
+.header-links.open {
+    opacity: 1;
+    visibility: visible;
 }
 .header-links a {
     border-bottom: 1px solid white;
@@ -96,13 +100,9 @@ header {
     margin: .4rem .2rem .4rem 1.3rem;
     font-weight: bold;
     padding-bottom: .2rem;
-}
-.header-links.open {
-    opacity: 1;
-    scale: 1;
-}
-.header-links a:hover {
-    border-bottom-color: var(--main-color);
+    &:hover {
+        border-bottom-color: var(--main-color);
+    }
 }
 .hamburger {
     background: none;
