@@ -83,6 +83,7 @@ header {
     color: var(--main-color);
 }
 .header-links {
+    position: relative;
     display: flex;
     visibility: hidden;
     opacity: 0;
