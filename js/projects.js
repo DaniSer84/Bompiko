@@ -1,6 +1,6 @@
 import { createProjectCard } from "./modules/components/createProjectCard.js"
 import { PROJECTS } from "./modules/mock/projectList.js"
-import { plusProjectSlides } from "./modules/components/slideShow.js"
+import { plusProjectSlides } from "./modules/components/projectSlideShow.js"
 
 let projectBtn = document.querySelector('.project-list-container span i')
 let projectList = document.querySelector('.project-list')

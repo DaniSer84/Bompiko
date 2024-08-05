@@ -18,6 +18,9 @@
     display: inline-block;
     margin-bottom: .3rem;
 }
+.project-list-container i {
+    cursor: pointer;
+}
 .project-list {
     position: relative;
     z-index: 99;
@@ -27,7 +30,7 @@
     flex-direction: column;
     overflow: hidden;
     padding-right: .2rem;
-    background-color: white;
+    background-color: #ffffff96;
 }
 .show-project-list {
     max-height: 500px;
@@ -126,12 +129,18 @@ h3 {
         font-size: 1rem;
     }
 }
+@media (max-width: 700px) {
+    .project-list-container {
+        right: 20%;
+        top: 15px;
+    }
+} 
 @media (max-width: 500px) {
     .project-card {
         margin: 0 1rem;
     }
-    .project-list-container {
+    /* .project-list-container {
         right: 97px;
         top: 15px;  
-    }
+    } */
 } 
