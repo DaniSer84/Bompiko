@@ -1,21 +1,16 @@
 import { toggleText } from "./functions.js";
+import { createEl } from "./createEl.js";
 
 function createServicesList(list, container) {
     list.forEach(element => {
-        let listElement = document.createElement('li')
-        let button = document.createElement('span')
-        let paragraphContainer = document.createElement('div')
-        let paragraph = document.createElement('p')
+
+        let listElement = createEl('li', '', '', element.name, '', container)
+        let button = createEl('span', `${element.dataFilter}-btn`, '', '+', '', listElement)
+        let paragraphContainer = createEl('div', `${element.dataFilter}-text`, 'nav-text hide', '', '', container)
+        let paragraph = createEl('p', '', '', element.paragraph, '', paragraphContainer)
 
         button.dataset.filter = element.dataFilter
-        button.id = `${element.dataFilter}-btn`
         paragraphContainer.dataset.filter = element.dataFilter
-        paragraphContainer.id = `${element.dataFilter}-text`
-        paragraphContainer.className = 'nav-text hide'        
-
-        button.textContent = '+'
-        paragraph.textContent = element.paragraph
-        listElement.innerHTML = element.name
 
         container.addEventListener('click', (e) => {
             let pressedButton = e.target.closest('span')
@@ -24,10 +19,6 @@ function createServicesList(list, container) {
                 }
             }
         )
-
-        container.append(listElement, paragraphContainer)
-        listElement.append(button)
-        paragraphContainer.append(paragraph)
     });
 } 
 
