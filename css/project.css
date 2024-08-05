@@ -80,6 +80,14 @@
     height: 100%;
     object-fit: cover;
 }
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
 .project-details, .project-extra {
     margin: 0 30px;
 }
