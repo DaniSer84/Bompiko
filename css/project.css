@@ -143,9 +143,6 @@ h3 {
 @media (max-width: 500px) {
     .project-card {
         margin: 0 1rem;
+        margin-bottom: 2rem;
     }
-    /* .project-list-container {
-        right: 97px;
-        top: 15px;  
-    } */
 } 
