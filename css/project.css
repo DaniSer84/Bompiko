@@ -11,7 +11,7 @@
 }
 .project-list {
     max-height: 0;
-    transition: max-height 1s ease-in-out;
+    transition: max-height .2s;
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -21,9 +21,9 @@
     font-variant: small-caps;
     font-style: italic;
 }
-.project-list-container:hover .project-list {
+.show-project-list {
     max-height: 500px;
-    /* transition: max-height 0.5s ease-in-out; */
+    transition: max-height 2s;
 }
 
 .project-card {
