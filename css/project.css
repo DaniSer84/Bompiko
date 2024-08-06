@@ -5,6 +5,10 @@
     --medium-space: 1.4rem;
     --large-space: 2.4rem;
 }
+p {
+    line-height: 1.3rem;
+    padding: 1rem 0;
+}
 
 .project-list-container {
     position: absolute;
@@ -144,5 +148,8 @@ h3 {
     .project-card {
         margin: 0 1rem;
         margin-bottom: 2rem;
+    }
+    .project-list-container {
+        max-width: 100px;
     }
 } 
