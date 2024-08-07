@@ -56,6 +56,7 @@ p {
 
 .project-card {
     display: grid;
+    max-width: 2000px;
     grid-template-columns: 60% auto;
     grid-template-rows: auto auto auto;
     margin: 0 80px;
@@ -129,7 +130,7 @@ h3 {
     margin-right: .5rem;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 880px) {
     .project-card {
         display: flex;
         flex-direction: column;
@@ -137,6 +138,9 @@ h3 {
     }
     .project-slides i {
         font-size: 1rem;
+    }
+    .project-details, .project-extra {
+        margin: 0;
     }
 }
 @media (max-width: 700px) {
@@ -157,3 +161,9 @@ h3 {
         max-width: 100px;
     }
 } 
+@media (min-width: 2000px) {
+    .project-card {
+        margin: 0 auto;
+        margin-bottom: 150px;
+    }
+}
