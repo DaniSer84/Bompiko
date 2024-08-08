@@ -53,7 +53,56 @@ p {
     color: white;
     border-radius: 4px;
 }
-
+.carousel-container {
+    margin: 100px 80px;
+}
+.carousel-slides-container {
+    position: relative;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.my-carousel-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+.my-carousel-slide h2 {
+    order: 1;
+    flex-basis: 25%;
+}
+.carousel-slide-img {
+    order: 2;
+    max-width: 40%;
+    flex-basis: 50%;
+}
+.my-carousel-slide p {
+    order: 3;
+    flex-basis: 25%;
+}
+.carousel-dots-container {
+    text-align: center;
+    margin-top: 15px;
+    position: relative;
+    max-width: 100px;
+    margin: 15px auto;
+}
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 6px;
+    background-color: #ffb6ac;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: var(--main-color);
+  }
 .project-card {
     display: grid;
     max-width: 2000px;
@@ -73,7 +122,7 @@ p {
     grid-row: 2 / span 2;
     position: relative;
 }
-.next, .prev {
+.next, .prev, .carousel-prev, .carousel-next {
     color: var(--main-color);
     font-size: 1.5rem;
     position: absolute;
@@ -86,7 +135,7 @@ p {
         scale: 1;
     }
 }
-.prev {
+.prev, .carousel-prev {
     right: 75px;
 }
 .project-img {
