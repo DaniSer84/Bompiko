@@ -185,11 +185,19 @@ h3 {
         flex-direction: column;
         /* text-align: center; */
     }
-    .project-slides i {
+    .project-slides i, .carousel-slides-container i {
         font-size: 1rem;
     }
     .project-details, .project-extra {
         margin: 0;
+    }
+    .my-carousel-slide {
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    .my-carousel-slide img {
+        max-width: 100%;
     }
 }
 @media (max-width: 700px) {
@@ -208,6 +216,12 @@ h3 {
     }
     .project-list-container {
         max-width: 100px;
+    }
+    .carousel-container {
+        margin: 30px 1rem;
+    }
+    .carousel-slides-container {
+        padding: 1rem;
     }
 } 
 @media (min-width: 2000px) {
